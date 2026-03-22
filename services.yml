@@ -1,0 +1,41 @@
+services:
+  dcs:
+    name: DCS
+    checker:
+      basedir: ./checkers/dcs
+      script: ./dcs.checker.py
+      setup: python3 -m pip install --break-system-packages -r requirements.txt
+    vuln:
+      basedir: ./services/dcs
+  lost_museum:
+    name: Lost Museum
+    checker:
+      basedir: ./checkers/lost_museum
+      script: ./lost_museum.checker.py
+      setup: python3 -m pip install --break-system-packages -r requirements.txt
+    vuln:
+      basedir: ./services/lost_museum
+  museumorphosis:
+    name: Museumorphosis
+    checker:
+      basedir: ./checkers/museumorphosis
+      script: ./museumorphosis.checker.py
+      setup: python3 -m pip install --break-system-packages -r requirements.txt
+    vuln:
+      basedir: ./services/museumorphosis
+  scp:
+    name: SCP
+    checker:
+      basedir: ./checkers/scp
+      script: ./scp.checker.py
+      setup: python3 -m pip install --break-system-packages -r requirements.txt
+    vuln:
+      basedir: ./services/scp
+  solaris:
+    name: Solaris
+    checker:
+      basedir: ./checkers/solaris
+      script: ./solaris.checker.py
+      setup: python3 -m pip install --break-system-packages -r requirements.txt
+    vuln:
+      basedir: ./services/solaris
