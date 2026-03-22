@@ -23,14 +23,6 @@ services:
       setup: python3 -m pip install --break-system-packages -r requirements.txt
     vuln:
       basedir: ./services/museumorphosis
-  internal_scp:
-    name: Internal SCP
-    checker:
-      basedir: ./checkers/scp
-      script: ./scp.checker.py
-      setup: python3 -m pip install --break-system-packages -r requirements.txt
-    vuln:
-      basedir: ./internal/scp
   scp:
     name: SCP
     checker:
