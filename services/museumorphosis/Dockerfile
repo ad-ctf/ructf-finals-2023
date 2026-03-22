@@ -9,7 +9,7 @@ COPY go.mod go.sum ./
 RUN go mod download
 
 COPY ./ ./
-RUN CGO_ENABLED=1 go build -o app cmd/app/main.go
+RUN CGO_ENABLED=1 CGO_CFLAGS='-D_LARGEFILE64_SOURCE' go build -o app cmd/app/main.go
 
 FROM alpine:3.14
 

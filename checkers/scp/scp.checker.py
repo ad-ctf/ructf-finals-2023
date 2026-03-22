@@ -12,7 +12,7 @@ from gornilo.http_clients import requests_with_retries
 
 checker = NewChecker()
 
-flag_re = re.compile(r'\w{31}=')
+flag_re = re.compile(r'(?:\w{31}=|TEAM\d{3}_[A-Z0-9]{32})')
 
 
 def random_str():
