@@ -1,4 +1,12 @@
 services:
+  bookster:
+    name: Bookster
+    checker:
+      basedir: ./checkers/bookster
+      script: ./bookster.checker.py
+      setup: python3 -m pip install --break-system-packages -r requirements.txt && python3 ./hydrate_videos.py
+    vuln:
+      basedir: ./services/bookster
   dcs:
     name: DCS
     checker:
